@@ -1,0 +1,10 @@
+{
+  "name": "Northwind",
+  "description": "Web application based on Northwind database",
+  "author": "Tomaž Vesel",
+  "dependencies": {
+    "express": "latest",
+    "ejs": "latest",
+    "mongoose": "latest"
+  }
+}

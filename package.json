@@ -1,10 +1,12 @@
 {
-  "name": "Northwind",
-  "description": "Web application based on Northwind database",
+  "name": "anonblog",
+  "description": "Blogposting web app",
   "author": "Tomaž Vesel",
   "dependencies": {
     "express": "latest",
     "ejs": "latest",
-    "mongoose": "latest"
+    "mongoose": "latest",
+    "method-override": "latest",
+    "body-parser": "latest"
   }
 }

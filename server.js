@@ -21,17 +21,24 @@ mongoose.connect('mongodb://localhost/data');
 server.get('/', function (req, res) {
     var mongoose = require('mongoose');
     var Blogpost = mongoose.model('Blogpost');
-    Blogpost.find( function (err, blogposts, count){
-    if (!err)
-        res.render('index', {
-        blogposts: blogposts
-        });
-    else 
-        console.log("Error while getting posts");
-  });
+    Blogpost.
+    find().
+    sort('-updated_at').
+    exec( function (err, blogposts){
+        if (!err) {
+            res.render('index', { blogposts: blogposts });
+        } else {
+            console.log("Error while getting posts");
+        }
+    });
+});
+
+server.get('/newpost', function (req, res) {
+    res.render('newpost', {});
 });
 
 server.post('/post', function (req, res) {
+    console.log(req);
     var mongoose = require('mongoose');
     var Blogpost = mongoose.model('Blogpost');
     console.log(req.body.title);

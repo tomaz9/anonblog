@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Anonblog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/19895-200.png">
   </head>
   
   <body>
@@ -41,13 +42,13 @@
     
     <div class="container" style="width: 60%;">
       <% blogposts.forEach(function(blogpost) { %>
-        <div class="card" style="margin-bottom: 10px;">
+        <div class="card" style="margin-bottom: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
           <div class="card-block">
             <h4 class="card-title"><%= blogpost.title %></h4>
             <h6 class="card-subtitle mb-2 text-muted"><%= blogpost.updated_at %></h6>
             <p class="card-text lead"><%= blogpost.content %>.</p>
-            <button type="button" class="btn btn-success btn-sm">Up <span class="badge badge-pill badge-success" style="color:black; background-color: white;">42</span></button>
-            <button type="button" class="btn btn-primary btn-sm">Down <span class="badge badge-pill badge-success" style="color:black; background-color: white;">12</span></button>
+            <button type="button" class="btn btn-success btn-sm">Up <span class="badge badge-pill badge-success" style="color:black; background-color: white;"><%= blogpost.ups %></span></button>
+            <button type="button" class="btn btn-primary btn-sm">Down <span class="badge badge-pill badge-success" style="color:black; background-color: white;"><%= blogpost.downs %></span></button>
           </div>
         </div> 
       <% }); %>

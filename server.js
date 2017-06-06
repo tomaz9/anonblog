@@ -12,7 +12,9 @@ server.use(bodyParser.json());
 var Blogpost = new Schema({
     title      : String,
     content    : String,
-    updated_at : Date
+    updated_at : { type: Date, default: Date.now },
+    ups        : { type: Number, default: 0 },
+    downs        : { type: Number, default: 0 }
 });
  
 mongoose.model('Blogpost', Blogpost);

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Anonblog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  </head>    
+  </head>
+  
   <body>
-    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color:#ffffff;">
+    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color: #ffffff; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,7 +29,7 @@
       </div>
     </nav>
     
-    <div class="jumbotron jumbotron-fluid" style="background-color:#ffffff;">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #ffffff;">
       <div class="container">
         <h1 class="display-3" style="text-align: center;">Anonblog</h1>
         <p class="lead" style="text-align: center;">Web blog where you can anonymously post anything</p>
@@ -45,6 +46,8 @@
             <h4 class="card-title"><%= blogpost.title %></h4>
             <h6 class="card-subtitle mb-2 text-muted"><%= blogpost.updated_at %></h6>
             <p class="card-text lead"><%= blogpost.content %>.</p>
+            <button type="button" class="btn btn-success btn-sm">Up <span class="badge badge-pill badge-success" style="color:black; background-color: white;">42</span></button>
+            <button type="button" class="btn btn-primary btn-sm">Down <span class="badge badge-pill badge-success" style="color:black; background-color: white;">12</span></button>
           </div>
         </div> 
       <% }); %>

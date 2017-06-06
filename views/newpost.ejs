@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <title>Anonblog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  </head>    
+  </head>
+  <style>
+    #inputform {
+      width: 50%;
+      margin-left: 25%;
+      margin-bottom: 2%;
+    }
+    
+    #newpost-jumbotron {
+      background-color: #ffffff;
+      padding-bottom: 0px;
+    }
+  </style>
   <body>
-    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color:#ffffff;">
+    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color:#ffffff; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,13 +40,14 @@
       </div>
     </nav>
     
-    <div class="jumbotron jumbotron-fluid"   style="background-color: #ffffff;">
+    <div id="newpost-jumbotron" class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-3" style="text-align: center;">Anonblog</h1>
         <p class="lead" style="text-align: center;">Web blog where you can anonymously post anything</p>
       </div>
     </div>
-    <div style="width:50%; margin-left:25%; margin-bottom: 20px;">
+    
+    <div id="inputform" class="container">
     <form action="/post" method="post">
       <div class="form-group">
         <label for="title">Post title</label>
